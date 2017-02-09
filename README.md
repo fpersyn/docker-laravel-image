@@ -1,7 +1,7 @@
 # docker-laravel-image
 
 ## Introduction
-It was intended as an easy way to containerise laravel apps to then host them on Google Container Engine (Kubernetes). It can also be used for running a local dev and staging server.
+This Dockerfile is intended as an easy way to containerise laravel apps to then host them on Google Container Engine (Kubernetes). It can also be used for running a local dev and staging server.
 
 ## Build your image
 
@@ -54,7 +54,7 @@ You have the option to point to your laravel `.htaccess` file `--build-arg htacc
 docker run -d --build-arg htaccess=/path_to_htaccess/.htaccess --name project_name project_name-image
 ```
 
-### Custom config
+## Executing laravel commands
 You can run the image & shell into the instance to run any commands :
 ```shell
 # run the image first
@@ -62,5 +62,7 @@ docker exec -it project_name bash
 cd var/www/laravel
 # you can run artisan and composer commands from here
 ```
+
+You can alter the Dockerfile to run additional artisan/composer commands to suit your project's needs.
 
 -Fred
