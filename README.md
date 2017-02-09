@@ -1,8 +1,7 @@
 # docker-laravel-image
-(work in progress)
 
 ## Introduction
-It was intended as an easy way to containerise laravel apps to host them on Google Container Engine (Kubernetes). It can also be used for running a local test/staging server.
+It was intended as an easy way to containerise laravel apps to then host them on Google Container Engine (Kubernetes). It can also be used for running a local dev and staging server.
 
 ## Build your image
 
