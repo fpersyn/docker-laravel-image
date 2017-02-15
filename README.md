@@ -39,17 +39,16 @@ To build the image with your own laravel project repository you can use `--build
 ```shell
 cd your_project_directory
 docker build --build-arg repo=https://username:pass@github.com/username/project.git -t project_name-image .
-docker run -d --name project_name project_name-image
 ```
 
 You have the option to point to your laravel `.env` file `--build-arg env=`. It will assume it is in the same directory as the Dockerfile by default:
 ```shell
-docker run -d --build-arg env=/path_to_env_file/.env --name project_name project_name-image
+docker build --build-arg env=/path_to_env_file/.env -t project_name-image .
 ```
 
 You have the option to point to your laravel `.htaccess` file `--build-arg htaccess=`. It will assume use the file in this repo by default:
 ```shell
-docker run -d --build-arg htaccess=/path_to_htaccess/.htaccess --name project_name project_name-image
+docker build --build-arg htaccess=/path_to_htaccess/.htaccess -t project_name-image .
 ```
 
 See 'Fresh build' for instructions on how to map your ports to localhost with SSL support.
